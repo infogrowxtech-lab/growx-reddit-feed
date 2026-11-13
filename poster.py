@@ -2,7 +2,7 @@
 
 Each GitHub Actions run (3 slots/day) decides whether to RELEASE the next post from
 queue/ into docs/feed.xml. IFTTT watches that feed and submits it to Reddit.
-Day ends with 1-3 posts (first 14 days: 1/day).
+Days vary 0-2 posts (first 14 days: 1/day), max 26/month to fit IFTTT free credits.
 Delete/edit a file in queue/ to skip/change it. Create a PAUSE file to stop.
 """
 import datetime as dt
@@ -19,6 +19,7 @@ QUEUE, POSTED = ROOT / "queue", ROOT / "posted"
 STATE, FEED = ROOT / "state.json", ROOT / "docs" / "feed.xml"
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 SLOTS, WARMUP_DAYS, FEED_SIZE = 3, 14, 20
+MONTHLY_CAP = 26  # IFTTT free = 1000 credits/month, ~35 credits per post
 
 
 def parse_post(path):
@@ -65,8 +66,12 @@ def main():
     state.setdefault("feed", [])
     if state.get("date") != today:
         age = (now.date() - dt.date.fromisoformat(state["start_date"])).days
-        state.update(date=today, posted_today=0,
-                     target=1 if age < WARMUP_DAYS else random.randint(1, 3))
+        month = today[:7]
+        if state.get("month") != month:
+            state.update(month=month, month_count=0)
+        left = MONTHLY_CAP - state["month_count"]
+        target = 1 if age < WARMUP_DAYS else random.choice([0, 1, 1, 1, 2])
+        state.update(date=today, posted_today=0, target=max(0, min(target, left)))
 
     slot = 0 if now.hour < 12 else (1 if now.hour < 17 else 2)
     remaining = SLOTS - slot
@@ -80,12 +85,13 @@ def main():
         meta, body = parse_post(path)
         state["feed"].insert(0, {"id": f"{path.stem}-{now:%Y%m%d%H%M}",
                                  "title": meta["title"], "subreddit": meta["subreddit"],
-                                 "body": body, "date": format_datetime(now)})
+                                 "body": html.escape(body).replace("\n", "<br>"), "date": format_datetime(now)})
         state["feed"] = state["feed"][:FEED_SIZE]
         with path.open("a", encoding="utf-8") as f:
             f.write(f"\n<!-- released {now.isoformat()} -->\n")
         shutil.move(str(path), POSTED / path.name)
         state["posted_today"] += 1
+        state["month_count"] = state.get("month_count", 0) + 1
         print("Released:", meta["title"])
     elif go:
         print("Queue empty - add more posts.")
