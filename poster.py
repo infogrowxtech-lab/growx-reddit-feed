@@ -85,7 +85,7 @@ def main():
         meta, body = parse_post(path)
         state["feed"].insert(0, {"id": f"{path.stem}-{now:%Y%m%d%H%M}",
                                  "title": meta["title"], "subreddit": meta["subreddit"],
-                                 "body": html.escape(body).replace("\n", "<br>"), "date": format_datetime(now)})
+                                 "body": html.escape(body, quote=False).replace("\n", "<br>"), "date": format_datetime(now)})
         state["feed"] = state["feed"][:FEED_SIZE]
         with path.open("a", encoding="utf-8") as f:
             f.write(f"\n<!-- released {now.isoformat()} -->\n")
