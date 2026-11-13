@@ -1,0 +1,39 @@
+name: Reddit auto post
+
+on:
+  schedule:
+    # 3 slots/day in IST: ~10:15, ~14:45, ~20:15 (GitHub can delay a bit)
+    - cron: "45 4 * * *"
+    - cron: "15 9 * * *"
+    - cron: "45 14 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Abhi turant 1 post feed me daalo (test)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency: reddit-poster
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run poster
+        env:
+          FORCE_POST: ${{ inputs.force }}
+        run: python poster.py
+      - name: Save progress
+        run: |
+          git config user.name "growx-bot"
+          git config user.email "growx-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "bot: posting update"
+          git push
