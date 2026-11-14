@@ -2,6 +2,13 @@
   "start_date": "2026-11-14",
   "feed": [
     {
+      "id": "002-202611150100",
+      "title": "The cheapest growth lever most small companies ignore: response time",
+      "subreddit": "Entrepreneur",
+      "body": "We tracked inquiries for a few service businesses and the pattern was boring but brutal: leads answered within 5 minutes converted far better than leads answered the next day. Same ad, same price, same offer.<br><br>What actually helped:<br>- One shared inbox/WhatsApp number instead of 3 people's personal phones<br>- A saved-reply template for the 5 most common questions<br>- An auto-reply that sets expectations (\"We'll call you within 30 minutes\")<br>- A simple rule: whoever is free picks it up, no ownership drama<br><br>None of this needs new software. Before you spend more on ads, measure how long your leads wait. What's your average reply time right now?",
+      "date": "Sun, 15 Nov 2026 01:00:19 +0530"
+    },
+    {
       "id": "001-202611141558",
       "title": "Before you pay anyone for a website, answer these 7 questions first",
       "subreddit": "smallbusiness",
@@ -10,8 +17,8 @@
     }
   ],
   "month": "2026-11",
-  "month_count": 1,
-  "date": "2026-11-14",
+  "month_count": 2,
+  "date": "2026-11-15",
   "posted_today": 1,
   "target": 1
 }
