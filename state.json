@@ -1,1 +1,17 @@
-{}
+{
+  "start_date": "2026-11-14",
+  "feed": [
+    {
+      "id": "001-202611141558",
+      "title": "Before you pay anyone for a website, answer these 7 questions first",
+      "subreddit": "smallbusiness",
+      "body": "I've seen a lot of small business owners spend money on a website and then hate it 6 months later. Usually it's because nobody asked the basic questions up front:<br><br>1. What is the ONE action you want a visitor to take? (call, WhatsApp, book, buy)<br>2. Who updates the content after launch - you or the developer?<br>3. Who owns the domain and hosting login? (It should be you. Always.)<br>4. Does it load in under 3 seconds on a cheap phone on mobile data?<br>5. Is your Google Business Profile linked and consistent with the site?<br>6. What does it cost per year after launch (hosting, renewals, plugins)?<br>7. How will you know if it's working? (form submissions, calls, analytics)<br><br>If you can't answer #1 clearly, don't build the site yet. Happy to answer questions in the comments.",
+      "date": "Sat, 14 Nov 2026 15:58:50 +0530"
+    }
+  ],
+  "month": "2026-11",
+  "month_count": 1,
+  "date": "2026-11-14",
+  "posted_today": 1,
+  "target": 1
+}
