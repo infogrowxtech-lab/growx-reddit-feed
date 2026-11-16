@@ -2,6 +2,13 @@
   "start_date": "2026-11-14",
   "feed": [
     {
+      "id": "1001-202611161346",
+      "title": "7 resume mistakes that get OPT candidates rejected in 6 seconds",
+      "subreddit": "u_Growx_Tech",
+      "body": "Recruiters skim a resume in seconds. These are the mistakes we fix most often:<br><br>1. No clear target role at the top (e.g. \"Java Backend Developer\").<br>2. Responsibilities instead of results. \"Worked on APIs\" vs \"Built 12 REST APIs used by 40k users\".<br>3. Tech skills buried at the bottom - put the stack recruiters search for near the top.<br>4. 3-4 page resumes. 1 page for &lt;5 years, 2 max.<br>5. Fancy templates that ATS can't read (tables, columns, icons).<br>6. Same resume for every job. Mirror 5-6 keywords from each job description.<br>7. Visa status confusion. Be clear and honest when asked about work authorization.<br><br>---<br>Growx Tech IT helps OPT &amp; H-1B IT professionals land US jobs: resume makeovers, interview prep and weekly visa + job-market explainers.<br>Free profile review: hi@growxtech-it.us | growxtech-it.in<br>Follow u/Growx_Tech for daily tips. (Not legal advice.)",
+      "date": "Mon, 16 Nov 2026 13:46:37 +0530"
+    },
+    {
       "id": "002-202611150100",
       "title": "The cheapest growth lever most small companies ignore: response time",
       "subreddit": "Entrepreneur",
@@ -17,8 +24,8 @@
     }
   ],
   "month": "2026-11",
-  "month_count": 2,
+  "month_count": 3,
   "date": "2026-11-16",
-  "posted_today": 0,
+  "posted_today": 1,
   "target": 1
 }

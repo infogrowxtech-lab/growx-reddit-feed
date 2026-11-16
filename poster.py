@@ -1,6 +1,6 @@
 """Growx Tech IT - Reddit autopost via RSS + IFTTT (free, no PC, no Reddit API key).
 
-Each GitHub Actions run (3 slots/day) decides whether to RELEASE the next post from
+Each GitHub Actions run (every ~2h) decides whether to RELEASE the next post from
 queue/ into docs/feed.xml. IFTTT watches that feed and submits it to Reddit.
 Days vary 0-2 posts (first 14 days: 1/day), max 26/month to fit IFTTT free credits.
 Delete/edit a file in queue/ to skip/change it. Create a PAUSE file to stop.
@@ -18,7 +18,7 @@ ROOT = Path(__file__).parent
 QUEUE, POSTED = ROOT / "queue", ROOT / "posted"
 STATE, FEED = ROOT / "state.json", ROOT / "docs" / "feed.xml"
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
-SLOTS, WARMUP_DAYS, FEED_SIZE = 3, 14, 20
+WARMUP_DAYS, FEED_SIZE = 14, 20
 MONTHLY_CAP = 26  # IFTTT free = 1000 credits/month, ~35 credits per post
 
 
@@ -73,8 +73,9 @@ def main():
         target = 1 if age < WARMUP_DAYS else random.choice([0, 1, 1, 1, 2])
         state.update(date=today, posted_today=0, target=max(0, min(target, left)))
 
-    slot = 0 if now.hour < 12 else (1 if now.hour < 17 else 2)
-    remaining = SLOTS - slot
+    # runs every ~2h between 08:30 and 22:30 IST; GitHub may delay or skip some runs
+    slot = now.hour
+    remaining = 1 if now.hour >= 20 else max(1, (22 - now.hour) // 2)
     need = state["target"] - state["posted_today"]
     go = force or (need > 0 and (need >= remaining or random.random() < need / remaining))
     print(f"{today} slot={slot} target={state['target']} done={state['posted_today']} release={go}")
