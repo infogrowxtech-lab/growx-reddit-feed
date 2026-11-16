@@ -1,6 +1,9 @@
 name: Reddit auto post
 
 on:
+  schedule:
+    # backup: every 2 hours 08:30-22:30 IST; the script only releases if today's quota isn't done
+    - cron: "0 3-17/2 * * *"
   workflow_dispatch:
     inputs:
       force:
