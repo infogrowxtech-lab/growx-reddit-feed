@@ -4,4 +4,35 @@ on:
   schedule:
     # every 2 hours, 08:30-22:30 IST (GitHub often delays scheduled runs)
     - cron: "0 3-17/2 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Abhi turant 1 post feed me daalo (test)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency: reddit-poster
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run poster
+        env:
+          FORCE_POST: ${{ inputs.force }}
+        run: python poster.py
+      - name: Save progress
+        run: |
+          git config user.name "growx-bot"
+          git config user.email "growx-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "bot: posting update"
           for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && break; sleep 5; done
