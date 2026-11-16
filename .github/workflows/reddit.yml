@@ -1,9 +1,6 @@
 name: Reddit auto post
 
 on:
-  schedule:
-    # every 2 hours, 08:30-22:30 IST (GitHub often delays scheduled runs)
-    - cron: "0 3-17/2 * * *"
   workflow_dispatch:
     inputs:
       force:

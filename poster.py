@@ -1,6 +1,6 @@
 """Growx Tech IT - Reddit autopost via RSS + IFTTT (free, no PC, no Reddit API key).
 
-Each GitHub Actions run (every ~2h) decides whether to RELEASE the next post from
+Run once a day by a Claude scheduled task with DAILY_MODE=true; it releases that day's posts
 queue/ into docs/feed.xml. IFTTT watches that feed and submits it to Reddit.
 Days vary 0-2 posts (first 14 days: 1/day), max 26/month to fit IFTTT free credits.
 Delete/edit a file in queue/ to skip/change it. Create a PAUSE file to stop.
@@ -74,28 +74,37 @@ def main():
         state.update(date=today, posted_today=0, target=max(0, min(target, left)))
 
     # runs every ~2h between 08:30 and 22:30 IST; GitHub may delay or skip some runs
-    slot = now.hour
-    remaining = 1 if now.hour >= 20 else max(1, (22 - now.hour) // 2)
+    daily = os.environ.get("DAILY_MODE") == "true"  # one run per day: release the whole day's quota now
     need = state["target"] - state["posted_today"]
-    go = force or (need > 0 and (need >= remaining or random.random() < need / remaining))
-    print(f"{today} slot={slot} target={state['target']} done={state['posted_today']} release={go}")
+    if force:
+        count = 1
+    elif daily:
+        count = max(0, need)
+    else:
+        remaining = 1 if now.hour >= 20 else max(1, (22 - now.hour) // 2)
+        count = 1 if need > 0 and (need >= remaining or random.random() < need / remaining) else 0
+    print(f"{today} target={state['target']} done={state['posted_today']} releasing={count}")
 
-    files = sorted(QUEUE.glob("*.md"))
-    if go and files:
+    for _ in range(count):
+        files = sorted(QUEUE.glob("*.md"))
+        if not files:
+            print("Queue empty - add more posts.")
+            break
         path = files[0]
         meta, body = parse_post(path)
-        state["feed"].insert(0, {"id": f"{path.stem}-{now:%Y%m%d%H%M}",
+        stamp = dt.datetime.now(IST)
+        state["feed"].insert(0, {"id": f"{path.stem}-{stamp:%Y%m%d%H%M%S}",
                                  "title": meta["title"], "subreddit": meta["subreddit"],
-                                 "body": html.escape(body, quote=False).replace("\n", "<br>"), "date": format_datetime(now)})
+                                 "body": html.escape(body, quote=False).replace("\n", "<br>"),
+                                 "date": format_datetime(stamp)})
         state["feed"] = state["feed"][:FEED_SIZE]
         with path.open("a", encoding="utf-8") as f:
-            f.write(f"\n<!-- released {now.isoformat()} -->\n")
+            f.write(f"\n<!-- released {stamp.isoformat()} -->\n")
         shutil.move(str(path), POSTED / path.name)
         state["posted_today"] += 1
         state["month_count"] = state.get("month_count", 0) + 1
         print("Released:", meta["title"])
-    elif go:
-        print("Queue empty - add more posts.")
+    print("Queue left:", len(list(QUEUE.glob("*.md"))))
 
     write_feed(state["feed"])
     STATE.write_text(json.dumps(state, indent=2))
