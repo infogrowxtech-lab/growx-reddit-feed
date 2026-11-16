@@ -4,4 +4,4 @@ on:
   schedule:
     # every 2 hours, 08:30-22:30 IST (GitHub often delays scheduled runs)
     - cron: "0 3-17/2 * * *"
-          git push
+          for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && break; sleep 5; done
