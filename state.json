@@ -2,6 +2,13 @@
   "start_date": "2026-11-14",
   "feed": [
     {
+      "id": "1002-20261117191327",
+      "title": "Job search checklist for anyone whose H-1B wasn't picked this year",
+      "subreddit": "h1b",
+      "body": "Getting not-selected is stressful. A practical checklist that has helped people we work with:<br><br>- Write down your exact OPT / STEM OPT end date and any unemployment-day limits that apply to you. Confirm the rules with your DSO - don't rely on forum posts.<br>- Ask your employer early whether they will file again next year.<br>- Consider roles at cap-exempt employers (universities and certain affiliated nonprofits/research orgs) - confirm cap-exempt status with an attorney.<br>- Keep your resume updated now, not when you're in a hurry.<br>- Build a list of 30-50 target companies with a history of sponsorship (public LCA data helps here).<br>- Talk to an immigration attorney about your specific options.<br><br>What else would you add for someone in this situation?<br><br>\u2014 Growx Tech IT (we help OPT &amp; H-1B IT professionals with resumes, interview prep and US job search). Not legal advice.",
+      "date": "Tue, 17 Nov 2026 19:13:27 +0530"
+    },
+    {
       "id": "1001-202611161346",
       "title": "7 resume mistakes that get OPT candidates rejected in 6 seconds",
       "subreddit": "u_Growx_Tech",
@@ -24,8 +31,8 @@
     }
   ],
   "month": "2026-11",
-  "month_count": 3,
+  "month_count": 4,
   "date": "2026-11-17",
-  "posted_today": 0,
+  "posted_today": 1,
   "target": 1
 }
