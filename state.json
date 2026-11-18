@@ -2,6 +2,13 @@
   "start_date": "2026-11-14",
   "feed": [
     {
+      "id": "1003-20261118191413",
+      "title": "How to answer 'Will you now or in the future require sponsorship?'",
+      "subreddit": "u_Growx_Tech",
+      "body": "This question scares a lot of OPT/STEM OPT candidates. Some general guidance (talk to your DSO/attorney for your case):<br><br>- Answer honestly. Wrong answers on applications can cause real problems later.<br>- Be ready with a calm 1-line explanation: your current authorization and how long it's valid.<br>- Focus the conversation on value: the skills and results you bring.<br>- Target companies that sponsor (check public LCA / H-1B employer data) so this question works for you, not against you.<br><br>Honesty + preparation beats panic every time.<br><br>---<br>Growx Tech IT helps OPT &amp; H-1B IT professionals land US jobs: resume makeovers, interview prep and weekly visa + job-market explainers.<br>Free profile review: hi@growxtech-it.us | growxtech-it.in<br>Follow u/Growx_Tech for daily tips. (Not legal advice.)",
+      "date": "Wed, 18 Nov 2026 19:14:13 +0530"
+    },
+    {
       "id": "1002-20261117191327",
       "title": "Job search checklist for anyone whose H-1B wasn't picked this year",
       "subreddit": "h1b",
@@ -31,8 +38,8 @@
     }
   ],
   "month": "2026-11",
-  "month_count": 4,
+  "month_count": 5,
   "date": "2026-11-18",
-  "posted_today": 0,
+  "posted_today": 1,
   "target": 1
 }
