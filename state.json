@@ -2,6 +2,13 @@
   "start_date": "2026-11-14",
   "feed": [
     {
+      "id": "1005-20261120164424",
+      "title": "The 30-second 'Tell me about yourself' formula for IT interviews",
+      "subreddit": "u_Growx_Tech",
+      "body": "Use Present - Past - Future:<br><br>Present: \"I'm a backend developer with 3 years in Java and Spring Boot, currently building payment APIs.\"<br>Past: \"Before that I worked on data pipelines at X, where I cut processing time by 40%.\"<br>Future: \"I'm looking for a role where I can work on high-scale systems, which is why this role caught my eye.\"<br><br>Keep it under 60 seconds. No life story, no GPA, no hobbies unless asked. Practice it out loud 5 times.<br><br>---<br>Growx Tech IT helps OPT &amp; H-1B IT professionals land US jobs: resume makeovers, interview prep and weekly visa + job-market explainers.<br>Free profile review: hi@growxtech-it.us | growxtech-it.in<br>Follow u/Growx_Tech for daily tips. (Not legal advice.)",
+      "date": "Fri, 20 Nov 2026 16:44:24 +0530"
+    },
+    {
       "id": "1004-20261119191400",
       "title": "Simple tracker that keeps OPT job searches organized (free template idea)",
       "subreddit": "OPT",
@@ -45,8 +52,8 @@
     }
   ],
   "month": "2026-11",
-  "month_count": 6,
+  "month_count": 7,
   "date": "2026-11-20",
-  "posted_today": 0,
+  "posted_today": 1,
   "target": 1
 }
