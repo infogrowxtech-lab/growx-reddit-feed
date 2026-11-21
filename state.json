@@ -2,6 +2,13 @@
   "start_date": "2026-11-14",
   "feed": [
     {
+      "id": "1006-20261121191335",
+      "title": "Things I wish international students knew before starting the US job search",
+      "subreddit": "f1visa",
+      "body": "From talking to many F-1 / OPT students, the same lessons come up again and again:<br><br>1. Start networking in your first semester, not your last.<br>2. Internships (CPT) matter more than GPA for most IT roles - check CPT rules with your DSO.<br>3. Career fair resumes should be 1 page and tailored to the role type.<br>4. Learn the basics of OPT and STEM OPT timelines early so deadlines don't surprise you.<br>5. Practice behavioral interviews - many technically strong candidates fail here.<br>6. Keep every document organized in one folder (I-20s, EAD, offer letters).<br><br>Anything you'd add for incoming students?<br><br>\u2014 Growx Tech IT (we help OPT &amp; H-1B IT professionals with resumes, interview prep and US job search). Not legal advice.",
+      "date": "Sat, 21 Nov 2026 19:13:35 +0530"
+    },
+    {
       "id": "1005-20261120164424",
       "title": "The 30-second 'Tell me about yourself' formula for IT interviews",
       "subreddit": "u_Growx_Tech",
@@ -52,8 +59,8 @@
     }
   ],
   "month": "2026-11",
-  "month_count": 7,
+  "month_count": 8,
   "date": "2026-11-21",
-  "posted_today": 0,
+  "posted_today": 1,
   "target": 1
 }
