@@ -2,6 +2,13 @@
   "start_date": "2026-11-14",
   "feed": [
     {
+      "id": "1008-20261123173814",
+      "title": "Behavioral interview prep: the STAR stories every engineer should have ready",
+      "subreddit": "u_Growx_Tech",
+      "body": "Most behavioral questions can be answered with 6-8 prepared stories. Have one ready for each:<br><br>1. A project you're proud of (impact + numbers)<br>2. A conflict with a teammate and how you resolved it<br>3. A mistake you made and what you changed after<br>4. A time you learned something new quickly<br>5. A tight deadline you met (or missed, and why)<br>6. A time you disagreed with a decision<br>7. A time you helped someone else succeed<br><br>Write each in STAR format (Situation, Task, Action, Result), keep each under 2 minutes, and always end with the result. Then map them to the company's values.<br><br>---<br>What would you add? Follow u/Growx_Tech for more US IT job-search tips. (General info, not legal advice.)",
+      "date": "Mon, 23 Nov 2026 17:38:14 +0530"
+    },
+    {
       "id": "1007-20261122191344",
       "title": "LinkedIn profile checklist for international IT job seekers",
       "subreddit": "u_Growx_Tech",
@@ -66,8 +73,8 @@
     }
   ],
   "month": "2026-11",
-  "month_count": 9,
-  "date": "2026-11-22",
+  "month_count": 10,
+  "date": "2026-11-23",
   "posted_today": 1,
   "target": 1
 }
