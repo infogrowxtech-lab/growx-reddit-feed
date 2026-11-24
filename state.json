@@ -2,6 +2,13 @@
   "start_date": "2026-11-14",
   "feed": [
     {
+      "id": "1010-20261125052004",
+      "title": "How to get referrals when you don't know anyone at the company",
+      "subreddit": "u_Growx_Tech",
+      "body": "Referrals can get you an interview much faster than cold applications. What works:<br><br>1. Find people at the company who share something with you: same university, same home country, same previous employer.<br>2. Send a short, specific message: who you are, the exact job ID, and one line on why you fit.<br>3. Make it easy: attach your resume and a 2-line summary they can paste.<br>4. Don't ask strangers for a job. Ask for 10 minutes of advice first.<br>5. Follow up once after a week. Then move on.<br><br>Quality over quantity: 5 thoughtful messages beat 50 copy-paste ones.<br><br>---<br>What would you add? Follow u/Growx_Tech for more US IT job-search tips. (General info, not legal advice.)",
+      "date": "Wed, 25 Nov 2026 05:20:04 +0530"
+    },
+    {
       "id": "1009-20261124191344",
       "title": "STEM OPT: questions to ask before you accept an offer",
       "subreddit": "u_Growx_Tech",
@@ -80,8 +87,8 @@
     }
   ],
   "month": "2026-11",
-  "month_count": 11,
-  "date": "2026-11-24",
+  "month_count": 12,
+  "date": "2026-11-25",
   "posted_today": 1,
   "target": 1
 }
