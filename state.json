@@ -2,6 +2,13 @@
   "start_date": "2026-11-14",
   "feed": [
     {
+      "id": "1009-20261124191344",
+      "title": "STEM OPT: questions to ask before you accept an offer",
+      "subreddit": "u_Growx_Tech",
+      "body": "Before accepting an offer during OPT, these questions are worth asking (and verifying with your DSO/attorney):<br><br>- Is the employer enrolled in E-Verify? (Required for STEM OPT.)<br>- Will they complete the I-983 training plan with you?<br>- Is the role related to your STEM degree?<br>- Is it a W-2 role with the employer, and do they have a history of filing H-1B petitions?<br>- What's the timeline if they plan to sponsor?<br><br>Asking these upfront avoids painful surprises later.<br><br>---<br>What would you add? Follow u/Growx_Tech for more US IT job-search tips. (General info, not legal advice.)",
+      "date": "Tue, 24 Nov 2026 19:13:44 +0530"
+    },
+    {
       "id": "1008-20261123173814",
       "title": "Behavioral interview prep: the STAR stories every engineer should have ready",
       "subreddit": "u_Growx_Tech",
@@ -73,8 +80,8 @@
     }
   ],
   "month": "2026-11",
-  "month_count": 10,
+  "month_count": 11,
   "date": "2026-11-24",
-  "posted_today": 0,
+  "posted_today": 1,
   "target": 1
 }
