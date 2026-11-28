@@ -2,6 +2,13 @@
   "start_date": "2026-11-14",
   "feed": [
     {
+      "id": "1012-20261128161541",
+      "title": "A 4-week plan to get interview-ready for mid-level IT roles",
+      "subreddit": "u_Growx_Tech",
+      "body": "A simple plan we suggest:<br><br>Week 1: Fix your resume and LinkedIn. Pick 1 target role. Make a list of 40 target companies.<br>Week 2: Brush up core skills for that role (DSA basics, SQL, system design or cloud, depending on the role). 1 hour a day.<br>Week 3: Practice. 3 mock interviews (friends, peers, or free platforms). Record yourself answering behavioral questions.<br>Week 4: Apply + network daily. 5 targeted applications and 3 referral requests per day.<br><br>Consistency matters more than intensity. What would you change for your field?<br><br>---<br>What would you add? Follow u/Growx_Tech for more US IT job-search tips. (General info, not legal advice.)",
+      "date": "Sat, 28 Nov 2026 16:15:41 +0530"
+    },
+    {
       "id": "1011-20261126173935",
       "title": "Why your resume isn't getting interviews (quick self-check)",
       "subreddit": "u_Growx_Tech",
@@ -94,8 +101,8 @@
     }
   ],
   "month": "2026-11",
-  "month_count": 13,
+  "month_count": 14,
   "date": "2026-11-28",
-  "posted_today": 0,
+  "posted_today": 1,
   "target": 1
 }
